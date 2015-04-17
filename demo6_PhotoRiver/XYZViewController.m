@@ -60,7 +60,7 @@
         }
     }
 
-    
+    //增加双击手势，双击改变图片布局
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap)];
     [doubleTap setNumberOfTapsRequired:2];
     [self.view addGestureRecognizer:doubleTap];
@@ -71,6 +71,7 @@
     
     NSLog(@"DoubleTap...........");
     
+    //当图片处于绘图状态或者放大显示状态时，手势无效
     for (XYZPhoto *photo in self.photos) {
         if (photo.state == XYZPhotoStateDraw || photo.state == XYZPhotoStateBig) {
             return;
@@ -80,6 +81,7 @@
     float W = self.view.bounds.size.width / 3;
     float H = self.view.bounds.size.height / 3;
     
+    //添加动画
     [UIView animateWithDuration:1 animations:^{
         for (int i = 0; i < self.photos.count; i++) {
             XYZPhoto *photo = [self.photos objectAtIndex:i];
