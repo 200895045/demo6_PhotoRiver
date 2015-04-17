@@ -20,6 +20,8 @@
         self.drawView = [[XYZDrawView alloc]initWithFrame:self.bounds];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         self.drawView.contentMode = UIViewContentModeScaleAspectFit;
+        
+        //在图片下面增加一个用于绘画的drawView
         [self addSubview:self.drawView];
         [self addSubview:self.imageView];
         
