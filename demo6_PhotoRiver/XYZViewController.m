@@ -41,8 +41,8 @@
     
     
     //添加12个图片到界面中
-    if (photoPaths) {
-        for (int i = 0; i < 12; i++) {
+    if (photoPaths.count > 0) {
+        for (int i = 0; i < photoPaths.count; i++) {
             //随机设置图片在屏幕上的显示位置
             float X = arc4random()%((int)self.view.bounds.size.width - IMAGEWIDTH);
             float Y = arc4random()%((int)self.view.bounds.size.height - IMAGEHEIGHT);
