@@ -40,7 +40,7 @@
     }
     
     
-    //添加12个图片到界面中
+    //添加图片到界面中
     if (photoPaths.count > 0) {
         for (int i = 0; i < photoPaths.count; i++) {
             //随机设置图片在屏幕上的显示位置
