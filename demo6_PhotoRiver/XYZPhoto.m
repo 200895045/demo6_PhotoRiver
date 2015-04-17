@@ -72,6 +72,7 @@
    
 }
 
+
 - (void)swipImage {
     
     if (self.state == XYZPhotoStateBig) {

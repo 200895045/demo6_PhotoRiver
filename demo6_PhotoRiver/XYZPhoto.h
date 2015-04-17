@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "XYZDrawView.h"
 
+//图片显示的状态
 typedef NS_ENUM(NSInteger, XYZPhotoState) {
-    XYZPhotoStateNormal,
-    XYZPhotoStateBig,
-    XYZPhotoStateDraw,
-    XYZPhotoStateTogether
+    XYZPhotoStateNormal, //流动状态
+    XYZPhotoStateBig, //放大显示状态
+    XYZPhotoStateDraw, //显示图片背面的绘图view状态
+    XYZPhotoStateTogether //聚合显示状态（9宫格）
 };
 
 @interface XYZPhoto : UIView

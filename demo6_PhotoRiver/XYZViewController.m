@@ -9,6 +9,7 @@
 #import "XYZViewController.h"
 #import "XYZPhoto.h"
 
+//定义图片大小
 #define IMAGEWIDTH 120
 #define IMAGEHEIGHT 160
 
@@ -22,15 +23,14 @@
 {
     [super viewDidLoad];
     
+    //获取图片文件路径
     self.photos = [[NSMutableArray alloc]init];
     NSMutableArray *photoPaths = [[NSMutableArray alloc]init];
-    
     NSString *path = [[NSBundle mainBundle] bundlePath];
-    
     NSLog(@"path =%@", path);
     
+    //将jpg/JPG格式的图片路径添加到数组中，用于循环显示
     NSFileManager *fm = [NSFileManager defaultManager];
-    
     NSArray *fileNames = [fm contentsOfDirectoryAtPath:path error:nil];
     for (NSString *fileName in fileNames ) {
         if ([fileName hasSuffix:@"jpg"] || [fileName hasSuffix:@"JPG"]) {
@@ -40,9 +40,10 @@
     }
     
     
-    //添加9个图片到界面中
+    //添加12个图片到界面中
     if (photoPaths) {
         for (int i = 0; i < 12; i++) {
+            //随机设置图片在屏幕上的显示位置
             float X = arc4random()%((int)self.view.bounds.size.width - IMAGEWIDTH);
             float Y = arc4random()%((int)self.view.bounds.size.height - IMAGEHEIGHT);
             float W = IMAGEWIDTH;
