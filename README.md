@@ -6,4 +6,4 @@ demo中为每个显示在视图窗口中的图片创建一个对象，然后使�
 
 更合理的实现方式应该是使用自定义UICollectionViewCell，充分发挥其重用机制，并使用自动布局。
 ####效果图
-![demo6_PhotoRiver]()
+![demo6_PhotoRiver](https://github.com/debolee/demo6_PhotoRiver/blob/master/PhotoRiver.gif)
